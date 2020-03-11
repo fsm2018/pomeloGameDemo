@@ -1,0 +1,29 @@
+{
+  "development": {
+    "3201": {
+      "gametype": 3,
+      "entermin": 64,
+      "entermax": -1,
+      "playmin": 32,
+      "roommax": 12,
+      "exchangetime": 20,
+      "robottime": 0.1,
+      "conf": {
+        "gamenums": 8,
+        "peoplemax": 2,
+        "eachcost": 1,
+        "roomtype": 1
+      },
+      "reward": {
+        "switch": 1,
+        "condition1": 20,
+        "condition2": 7,
+        "prize1": 200
+      }
+    }
+  },
+  "test": {
+  },
+  "production": {
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "connector.entryHandler.login": {
+    "required uInt32 logintype": 1,
+    "required string account": 2,
+    "required string os": 3,
+    "required string version": 4,
+    "required uInt32 platform": 5
+  },
+  "hall.hallHandler.getUsersInfo": {
+    "repeated uInt32 userIds": 1
+  },
+  "hall.hallHandler.modifyUserInfo": {
+    "required uInt32 type": 1,
+    "optional string sign": 2
+  },
+  "hall.hallHandler.bindxl": {
+    "required string code": 1
+  },
+  "hall.hallHandler.create_private_room": {
+    "required uInt32 gametype": 1,
+    "required uInt32 gamenums": 2,
+    "required uInt32 peoplemax": 3,
+    "required uInt32 createtype": 4,
+    "optional string clubId": 5,
+    "optional uInt32 wanfa": 6,
+    "optional uInt32 raise": 7
+  },
+  "hall.hallHandler.enter_private_room": {
+    "required string roomId": 1
+  },
+  "hall.hallHandler.get_empty_rooms": {
+  },
+  "hall.hallHandler.del_private_room": {
+    "required string roomId": 1
+  },
+  "hall.hallHandler.getHistory": {
+    "required uInt32 type": 1,
+    "optional uInt32 start": 2,
+    "optional uInt32 step": 3
+  },
+  "hall.hallHandler.getRecord": {
+    "required string uuid": 1,
+    "optional string index": 2
+  },
+  "hall.hallHandler.getBigWinerRank": {
+    "required uInt32 type": 1,
+    "optional uInt32 start": 2,
+    "optional uInt32 step": 3
+  },
+  "hall.hallHandler.suggest": {
+    "required string content": 1,
+    "required string phone": 2
+  },
+  "hall.hallHandler.getVerifyCode": {
+    "required string phone": 1
+  },
+  "hall.hallHandler.certify": {
+    "required uInt32 type": 1,
+    "required string phone": 2,
+    "required string code": 3
+  },
+  "hall.hallHandler.getRollingNotice": {
+  },
+  "hall.hallHandler.bindOwner": {
+    "required uInt32 onwerId": 1
+  },
+  "hall.hallHandler.payResult": {
+    "required uInt32 type": 1,
+    "optional string receipt": 2
+  },
+  "hall.hallHandler.getHallGameConfigs": {
+  },
+  "hall.hallHandler.enterHallGameHall": {
+    "required string hallGamehallId": 1
+  },
+  "hall.hallHandler.getHallGameCountAll": {
+    "required string hallGamehallId": 1,
+    "optional string date": 2
+  },
+  "hall.hallHandler.getHallGameWinerCountAll": {
+    "required string hallGamehallId": 1,
+    "optional string date": 2
+  },
+  "hall.hallHandler.getMails": {
+  },
+  "hall.hallHandler.readMail": {
+    "required string id": 1
+  },
+  "hall.hallHandler.delMail": {
+    "required string id": 1
+  },
+  "hallgame.gameHandler.loginHallGameHall": {
+  },
+  "hallgame.gameHandler.logoutHallGameHall": {
+  },
+  "hallgame.gameHandler.getHallGameRooms": {
+  },
+  "hallgame.gameHandler.enter_game": {
+    "optional string roomId": 1,
+    "optional uInt32 seatIndex": 2
+  },
+  "hallgame.gameHandler.syncCountDown": {
+  },
+  "hallgame.gameHandler.ready": {
+    "required uInt32 ready": 1
+  },
+  "hallgame.gameHandler.exit": {
+  },
+  "hallgame.gameHandler.updateAddress": {
+    "required string address": 1
+  },
+  "hallgame.gameHandler.optIsRobotTime": {
+    "required uInt32 robot": 1
+  },
+  "game.gameHandler.enter_game": {
+  },
+  "game.gameHandler.ready": {
+    "required uInt32 ready": 1
+  },
+  "game.gameHandler.changeSeat": {
+    "required uInt32 hopeIndex": 1
+  },
+  "game.gameHandler.optExchangeSeat": {
+    "required uInt32 agree": 1
+  },
+  "game.gameHandler.doraise": {
+    "required uInt32 raise": 1
+  },
+  "game.gameHandler.exit": {
+  },
+  "game.gameHandler.dissolveRequest": {
+  },
+  "game.gameHandler.dissolveAgree": {
+    "required uInt32 agree": 1
+  },
+  "game.gameHandler.updateAddress": {
+    "required string address": 1
+  },
+  "game.hzMJHandler.chupai": {
+    "required uInt32 pai": 1
+  },
+  "game.hzMJHandler.chi": {
+    "repeated uInt32 pai": 1
+  },
+  "game.hzMJHandler.peng": {
+  },
+  "game.hzMJHandler.gang": {
+    "required uInt32 pai": 1
+  },
+  "game.hzMJHandler.hu": {
+  },
+  "game.hzMJHandler.guo": {
+  },
+  "game.hzDBuckleHandler.chupai": {
+    "repeated uInt32 pai": 1
+  },
+  "game.hzDBuckleHandler.guo": {
+  },
+  "chat.chatHandler.chatInGame": {
+    "required uInt32 scene":1,
+    "optional uInt32 type": 2,
+    "optional uInt32 receiver": 3,
+    "optional string content": 4,
+    "optional uInt32 desIndex": 5,
+    "optional uInt32 vtime": 6,
+    "optional uInt32 time": 7
+  },
+  "chat.chatHandler.getChatHistory": {
+    "required uInt32 scene": 1,
+    "optional string clubId": 2,
+    "optional uInt32 start": 3,
+    "optional uInt32 step": 4
+  },
+  "club.clubHandler.loginClub": {
+    "required string clubId": 1
+  },
+  "club.clubHandler.logoutClub": {
+  },
+  "club.clubHandler.getUserInvitation": {
+  },
+  "club.clubHandler.optUserInvitation": {
+    "required uInt32 agree": 1,
+    "required string clubId": 2
+  },
+  "club.clubHandler.joinExperienceClub": {
+  },
+  "club.clubHandler.getUserClubs": {
+  },
+  "club.clubHandler.getClubInfo": {
+    "required string clubId": 1
+  },
+  "club.clubHandler.getClubsBaseInfo": {
+    "repeated string clubIds": 1
+  },
+  "club.clubHandler.exitClub": {
+    "required string clubId": 1
+  },
+  "club.clubHandler.requestClub": {
+    "required string clubId": 1
+  },
+  "club.clubHandler.optClubRequests": {
+    "required uInt32 agree": 1,
+    "required string clubId": 2,
+    "required uInt32 requestId": 3
+  },
+  "club.clubHandler.modifyClubInfo": {
+    "required uInt32 type": 1,
+    "required string clubId": 2,
+    "optional string name": 3,
+    "optional string introduce": 4,
+    "optional string notice": 5,
+    "optional string open_time": 6,
+    "optional string close_time": 7,
+    "optional uInt32 uswitch": 8
+  },
+  "club.clubHandler.inviteUser": {
+    "required string clubId": 1,
+    "required uInt32 inviteUserId": 2
+  },
+  "club.clubHandler.kickUser": {
+    "required string clubId": 1,
+    "required uInt32 kickUserId": 2
+  },
+  "club.clubHandler.dissolveClub": {
+    "required string clubId": 1
+  },
+  "club.clubHandler.getClubHistroy": {
+    "required uInt32 type": 1,
+    "required string clubId": 2,
+    "required uInt32 gametype": 3
+  },
+  "club.clubHandler.getBigWinerRank": {
+    "required uInt32 type": 1,
+    "required string clubId": 2,
+    "required uInt32 gametype": 3
+  },
+  "club.clubHandler.getBattleCount": {
+    "required uInt32 type": 1,
+    "required string clubId": 2,
+    "required uInt32 gametype": 3
+  },
+  "gm.gmHandler.getAgentInfo": {
+  },
+  "gm.gmHandler.sellGems": {
+    "required uInt32 userId": 1,
+    "required uInt32 gems": 2
+  },
+  "gm.gmHandler.getSellRecord": {
+    "required uInt32 userId": 1,
+    "required uInt32 start": 2,
+    "required uInt32 step": 3
+  },
+  "gm.gmHandler.getUserChargeRecord": {
+    "optional uInt32 start": 1,
+    "optional uInt32 step": 2,
+    "optional uInt32 userid": 3,
+    "optional string startdate": 4,
+    "optional string enddate": 5
+  },
+  "gm.gmHandler.getSpreadUserInfo": {
+    "optional uInt32 userId": 1
+  },
+  "gm.gmHandler.getRebate": {
+    "optional uInt32 userId": 1
+  },
+  "gm.gmHandler.getRebateHistroy": {
+    "optional uInt32 start": 1,
+    "optional uInt32 step": 2
+  },
+  "gm.gmHandler.getStatistics": {
+  },
+  "gm.gmHandler.getRoomInfo": {
+    "required string roomId": 1
+  },
+  "gm.gmHandler.kickUserOutRoom": {
+    "required string roomId": 1,
+    "required uInt32 userId": 2
+  },
+  "gm.gmHandler.dissolveRoom": {
+    "required string roomId": 1
+  },
+  "gm.gmHandler.getUserInfo": {
+    "required uInt32 userId": 1
+  },
+  "gm.gmHandler.addBanUser": {
+    "required uInt32 userId": 1
+  },
+  "gm.gmHandler.removeBanUser": {
+    "required uInt32 userId": 1
+  },
+  "gm.gmHandler.changeAgentLevel": {
+    "required uInt32 userId": 1,
+    "required uInt32 agent_level": 2
+  },
+  "gm.gmHandler.getPlayerReportList": {
+    "required uInt32 start": 1,
+    "required uInt32 step": 2
+  },
+  "gm.gmHandler.getAgentRequestList": {
+    "required uInt32 start": 1,
+    "required uInt32 step": 2
+  },
+  "gm.gmHandler.optAgentRequest": {
+    "required uInt32 userId": 1,
+    "required uInt32 agree": 2
+  },
+  "gm.gmHandler.createClub": {
+    "optional uInt32 ownerId": 1,
+    "optional string clubId": 2,
+    "optional string name": 3,
+    "optional uInt32 gametype": 4
+  },
+  "gm.gmHandler.optClub": {
+    "required uInt32 type": 1,
+    "optional string clubId": 2,
+    "optional uInt32 ownerId": 3
+  },
+  "gm.gmHandler.getAllClub": {
+    "optional uInt32 type": 1,
+    "optional uInt32 start": 2,
+    "optional uInt32 step": 4
+  },
+  "gm.gmHandler.getServerInfo": {
+  },
+  "gm.gmHandler.setServerInfo": {
+    "required uInt32 type": 1,
+    "optional string AndroidVersion": 2,
+    "optional string MinAndroidVersion": 3,
+    "optional string IPhoneVersion": 4,
+    "optional string MinIPhoneVersion": 5,
+    "optional string ServerState": 6
+  },
+  "gm.gmHandler.getRollingNotice": {
+  },
+  "gm.gmHandler.setRollingNotice": {
+    "required string key": 1,
+    "required string info": 2,
+    "optional string beginTime": 3,
+    "optional string endTime": 4
+  },
+  "gm.gmHandler.delRollingNotice": {
+    "required string key": 1
+  },
+  "gm.gmHandler.getEclub": {
+  },
+  "gm.gmHandler.addEclub": {
+    "required string clubId": 1,
+    "optional sInt32 priority": 2
+  },
+  "gm.gmHandler.delEclub": {
+    "required string clubId": 1
+  },
+  "gm.gmHandler.getUserTaskStateList": {
+  },
+  "gm.gmHandler.optUserTaskState": {
+    "required uInt32 userId": 1,
+    "required uInt32 state": 2
+  },
+  "gm.gmHandler.addExperienceAgentList": {
+    "required uInt32 userId": 1
+  },
+  "gm.gmHandler.getExperienceAgentList": {
+  },
+  "gm.gmHandler.remExperienceAgentList": {
+    "required uInt32 userId": 1
+  },
+  "gm.gmHandler.getNewAgent": {
+    "required string date": 1,
+    "optional uInt32 start": 2,
+    "optional uInt32 step": 3
+  },
+  "task.taskHandler.getTasks": {
+  },
+  "task.taskHandler.finishTask": {
+    "required uInt32 type": 1,
+    "required uInt32 reclv": 2
+  }
+}

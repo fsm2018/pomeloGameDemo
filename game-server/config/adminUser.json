@@ -1,0 +1,15 @@
+[
+  {
+    "id": "user-1",
+    "username": "hsgame",
+    "password": "Hs322@game",
+    "level": 1
+  },
+
+  {
+    "id": "user-2",
+    "username": "developer",
+    "password": "Hs322@game",
+    "level": 2
+  }
+]

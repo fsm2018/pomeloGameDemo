@@ -1,0 +1,14 @@
+{
+  "development": {
+    "clubs_limit": 8,
+    "oclubs_limit": 5
+  },
+  "test": {
+    "clubs_limit": 8,
+    "oclubs_limit": 5
+  },
+  "production": {
+    "clubs_limit": 8,
+    "oclubs_limit": 5
+  }
+}

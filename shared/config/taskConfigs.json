@@ -1,0 +1,62 @@
+{
+  "development": {
+      "1": {
+        "num": 0,
+        "reclv_u": [],
+        "reclv": [1, 6, 16],
+        "reward": [800, 4000, 8000],
+        "loop": [],
+        "beginTime":1563331526656,
+        "endTime": 1563331526666
+      },
+      "2": {
+        "num": 0,
+        "reclv_u": [],
+        "reclv": [1],
+        "reward": [1000],
+        "loop": [1],
+        "beginTime":1563331526656,
+        "endTime": 1563331526666
+      }
+  },
+  "test": {
+    "1": {
+      "num": 0,
+      "reclv_u": [],
+      "reclv": [1, 6, 16],
+      "reward": [800, 4000, 8000],
+      "loop": [],
+      "beginTime":1563331526656,
+      "endTime": 1563331526666
+    },
+    "2": {
+      "num": 0,
+      "reclv_u": [],
+      "reclv": [1],
+      "reward": [1000],
+      "loop": [1],
+      "beginTime":1563331526656,
+      "endTime": 1563331526666
+    }
+  },
+  "production": {
+    "1": {
+      "num": 0,
+      "reclv_u": [],
+      "reclv": [1, 6, 16],
+      "reward": [800, 4000, 8000],
+      "loop": [],
+      "beginTime":1563331526656,
+      "endTime": 1563331526666
+    },
+    "2": {
+      "num": 0,
+      "reclv_u": [],
+      "reclv": [1],
+      "reward": [1000],
+      "loop": [1],
+      "beginTime":1563331526656,
+      "endTime": 1563331526666
+    }
+  }
+}

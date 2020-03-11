@@ -1,0 +1,35 @@
+{
+  "development":{
+    "club": [
+      {"id": 1, "time": "0 0 7 * * *", "action": "clubCron.loadAllClubInfo"}
+    ],
+    "task": [
+      {"id": 1, "time": "0 0 0 * * *", "action": "servertaskCron.updateBigWinerRank"},
+      {"id": 3, "time": "0 0 0 * * *", "action": "servertaskCron.DailyTask"},
+      {"id": 4, "time": "0 3 0 * * 1", "action": "servertaskCron.WeeklyTask"},
+      {"id": 5, "time": "0 5 0 1 * *", "action": "servertaskCron.MonthlyTask"}
+    ]
+  },
+  "test":{
+    "club": [
+      {"id": 1, "time": "0 0 7 * * *", "action": "clubCron.loadAllClubInfo"}
+    ],
+    "task": [
+      {"id": 1, "time": "0 0 0 * * *", "action": "servertaskCron.updateBigWinerRank"},
+      {"id": 3, "time": "0 0 0 * * *", "action": "servertaskCron.DailyTask"},
+      {"id": 4, "time": "0 3 0 * * 1", "action": "servertaskCron.WeeklyTask"},
+      {"id": 5, "time": "0 5 0 1 * *", "action": "servertaskCron.MonthlyTask"}
+    ]
+  },
+  "production":{
+    "club": [
+      {"id": 1, "time": "0 0 7 * * *", "action": "clubCron.loadAllClubInfo"}
+    ],
+    "task": [
+      {"id": 1, "time": "0 0 0 * * *", "action": "servertaskCron.updateBigWinerRank"},
+      {"id": 3, "time": "0 0 0 * * *", "action": "servertaskCron.DailyTask"},
+      {"id": 4, "time": "0 3 0 * * 1", "action": "servertaskCron.WeeklyTask"},
+      {"id": 5, "time": "0 5 0 1 * *", "action": "servertaskCron.MonthlyTask"}
+    ]
+  }
+}

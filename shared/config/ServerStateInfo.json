@@ -1,0 +1,23 @@
+{
+  "development": {
+    "ServerState": 0,
+    "AndroidVersion": "1.5.0.27",
+    "IPhoneVersion": "1.5.0.27",
+    "MinAndroidVersion": "1.5.0.1",
+    "MinIPhoneVersion": "1.5.0.1"
+  },
+  "test": {
+    "ServerState": 0,
+    "AndroidVersion": "1.5.0.27",
+    "IPhoneVersion": "1.5.0.27",
+    "MinAndroidVersion": "1.5.0.1",
+    "MinIPhoneVersion": "1.5.0.1"
+  },
+  "production": {
+    "ServerState": 0,
+    "AndroidVersion": "1.5.0.27",
+    "IPhoneVersion": "1.5.0.27",
+    "MinAndroidVersion": "1.5.0.1",
+    "MinIPhoneVersion": "1.5.0.1"
+  }
+}

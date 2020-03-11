@@ -1,0 +1,439 @@
+{
+  "kickUser": {
+    "required uInt32 type": 1,
+    "optional string reason": 2,
+    "optional uInt32 userId": 3
+  },
+  "enterGame": {
+    "message conf": {
+      "required uInt32 gametype": 1,
+      "required uInt32 creator": 2,
+      "required uInt32 gamenums": 3,
+      "required uInt32 peoplemax": 4,
+      "required uInt32 createtype": 5,
+      "required uInt32 wanfa": 6,
+      "required string clubId": 7,
+      "required uInt32 eachcost": 8,
+      "required uInt32 roomtype": 9,
+      "optional uInt32 raise": 10
+    },
+    "message seat": {
+      "required uInt32 userId": 1,
+      "required string name": 2,
+      "required string headimg": 3,
+      "required uInt32 sex": 4,
+      "required sInt32 score": 5,
+      "required uInt32 ready": 6,
+      "required uInt32 seatIndex": 7,
+      "required uInt32 online": 8,
+      "required string address": 9,
+      "required string ip": 10,
+      "optional uInt32 gems": 11
+    },
+    "required string roomId": 1,
+    "required uInt32 numOfGames": 2,
+    "required conf conf": 3,
+    "repeated seat seats": 4
+  },
+  "enterUser": {
+    "required uInt32 userId": 1,
+    "required string name": 2,
+    "required string headimg": 3,
+    "required uInt32 sex": 4,
+    "required sInt32 score": 5,
+    "required uInt32 ready": 6,
+    "required uInt32 seatIndex": 7,
+    "required uInt32 online": 8,
+    "required string address": 9,
+    "required string ip": 10,
+    "optional uInt32 gems": 11
+  },
+  "gameReady": {
+    "required uInt32 userId": 1,
+    "required uInt32 ready": 2,
+    "optional string clubId": 3,
+    "optional string roomId": 4,
+    "optional string hallGamehallId": 5
+  },
+  "gameChangeSeat": {
+    "message seat": {
+      "required uInt32 userId": 1,
+      "required uInt32 index": 2
+    },
+    "repeated seat seats": 1,
+    "required string roomId": 2,
+    "optional string clubId": 3
+  },
+  "gameExchangeSeat": {
+    "message seat": {
+      "required uInt32 userId": 1,
+      "required sInt32 agree": 2
+    },
+    "repeated seat seats": 1
+  },
+  "gameRaise": {
+    "required uInt32 raise": 1
+  },
+  "dissolveNotify": {
+  },
+  "dissolveAgreeNotify": {
+    "message user": {
+      "required uInt32 userId": 1,
+      "required sInt32 agree": 2
+    },
+    "required sInt32 time": 1,
+    "repeated user users": 2
+  },
+  "exitNotify": {
+    "required uInt32 userId": 1
+  },
+  "gameUpdateAddress": {
+    "required uInt32 userId": 1,
+    "required string address": 2
+  },
+  "gameNotice": {
+    "required string msg": 1
+  },
+  "gameMJBegin": {
+    "repeated uInt32 dice": 1,
+    "repeated uInt32 newSeats": 2,
+    "required uInt32 numOfGames": 3,
+    "required uInt32 button": 4,
+    "required sInt32 magicCard": 5,
+    "required uInt32 raise": 6,
+    "repeated uInt32 holds": 7
+  },
+  "gameMJAction": {
+    "required uInt32 canChu": 1,
+    "required uInt32 canHu": 2,
+    "required uInt32 canPeng": 3,
+    "optional sInt32 pengPai": 4,
+    "required uInt32 canGang": 5,
+    "repeated uInt32 gangPai": 6,
+    "optional uInt32 canChi": 7,
+    "message chiPai": {
+      "repeated uInt32 pai": 1
+    },
+    "repeated chiPai chiPai": 8,
+    "repeated sInt32 banChu": 9,
+    "optional uInt32 isMagicTime": 10
+  },
+  "gameMJMopai": {
+    "required uInt32 userId": 1,
+    "optional uInt32 pai": 2
+  },
+  "gameMJChupai": {
+    "required uInt32 userId": 1,
+    "required uInt32 pai": 2
+  },
+  "chiMJNotify": {
+    "required uInt32 userId": 1,
+    "repeated uInt32 pai": 2
+  },
+  "pengMJNotify": {
+    "required uInt32 userId": 1,
+    "required uInt32 pai": 2
+  },
+  "gangMJNotify": {
+    "required uInt32 userId": 1,
+    "required uInt32 pai": 2,
+    "required string gangtype": 3,
+    "optional sInt32 gangIndex": 4
+  },
+  "huMJNotify": {
+    "required uInt32 userId": 1,
+    "required uInt32 hupai": 2,
+    "required uInt32 code": 3,
+    "repeated uInt32 holds": 4
+  },
+  "gameOverMJNotify": {
+    "required uInt32 isEnd": 1,
+    "message userRT": {
+      "required uInt32 userId": 1,
+      "message chis": {
+        "repeated uInt32 pai": 1
+      },
+      "repeated chis chis": 2,
+      "repeated uInt32 pengs": 3,
+      "repeated uInt32 wangangs": 4,
+      "repeated uInt32 diangangs": 5,
+      "repeated uInt32 angangs": 6,
+      "repeated uInt32 holds": 7,
+      "required sInt32 score": 8,
+      "required sInt32 totalscore": 9,
+      "required uInt32 hued": 10,
+      "required sInt32 code": 11,
+      "optional sInt32 hupai": 12,
+      "optional sInt32 ma": 13,
+      "optional uInt32 point": 14
+    },
+    "repeated userRT results": 2
+  },
+  "gameMJSync": {
+    "required uInt32 state": 1,
+    "required uInt32 numOfMJ": 2,
+    "required uInt32 button": 3,
+    "required uInt32 turn": 4,
+    "required sInt32 lastChuPaiSeat": 5,
+    "required sInt32 chuPai": 6,
+    "required sInt32 magicCard": 7,
+    "required uInt32 numOfGames": 8,
+    "required string roomId": 9,
+    "message seat": {
+      "required uInt32 userId": 1,
+      "repeated uInt32 folds": 2,
+      "repeated uInt32 angangs": 3,
+      "repeated sInt32 angangChairs": 4,
+      "repeated uInt32 diangangs": 5,
+      "repeated uInt32 diangangChairs": 6,
+      "repeated uInt32 wangangs": 7,
+      "repeated sInt32 wangangChairs": 8,
+      "repeated uInt32 pengs": 9,
+      "repeated uInt32 pengChairs": 10,
+      "message chiPai": {
+        "repeated uInt32 pai": 1
+      },
+      "repeated chiPai chiCards": 11,
+      "repeated uInt32 chiChairs": 12,
+      "repeated uInt32 holds": 13,
+      "optional uInt32 holdslen": 14,
+      "optional uInt32 hued": 15,
+      "optional sInt32 hutype": 16,
+      "optional sInt32 hupai": 17,
+      "optional uInt32 isRobotTime": 18
+    },
+    "repeated seat seats": 10,
+    "message option": {
+      "required uInt32 canChu": 1,
+      "required uInt32 canHu": 2,
+      "required uInt32 canPeng": 3,
+      "required sInt32 pengPai": 4,
+      "required uInt32 canGang": 5,
+      "repeated uInt32 gangPai": 6,
+      "optional uInt32 canChi": 7,
+      "message chiPai": {
+        "repeated uInt32 pai": 1
+      },
+      "repeated chiPai chiPai": 8,
+      "repeated sInt32 banChu": 9,
+      "optional uInt32 isMagicTime": 10
+    },
+    "required option opt": 11,
+    "required uInt32 raise": 12
+  },
+  "gameDBuckleBegin": {
+    "required sInt32 select_poker": 1,
+    "repeated uInt32 newSeats": 2,
+    "required uInt32 numOfGames": 3,
+    "required uInt32 button": 4,
+    "required uInt32 raise": 5,
+    "required uInt32 firstSendIndex": 6,
+    "repeated uInt32 holds": 7,
+    "repeated uInt32 pholds": 8
+  },
+  "gameDBuckleChupai": {
+    "required uInt32 userId": 1,
+    "repeated uInt32 pai": 2
+  },
+  "gameDBuckleAction": {
+    "required sInt32 turn": 1,
+    "required sInt32 lcSeatIndex": 2,
+    "required sInt32 lcOpt": 3
+  },
+  "gameOverDBuckleNotify": {
+    "required uInt32 isEnd": 1,
+    "message userRT": {
+      "required uInt32 userId": 1,
+      "repeated uInt32 holds": 2,
+      "required sInt32 score": 3,
+      "required sInt32 totalscore": 4,
+      "required uInt32 win": 5,
+      "required sInt32 wintype": 6
+    },
+    "repeated userRT results": 2
+  },
+  "gameDBuckleSync": {
+    "required uInt32 state": 1,
+    "required uInt32 turn": 2,
+    "required uInt32 numOfGames": 3,
+    "required string roomId": 4,
+    "message oldChu": {
+      "repeated uInt32 pai": 1,
+      "required uInt32 pattern": 2,
+      "required sInt32 seatIndex": 3,
+      "required uInt32 userId": 4
+    },
+    "required oldChu oldChu": 5,
+    "required uInt32 raise": 6,
+    "message seat": {
+      "required uInt32 userId": 1,
+      "repeated uInt32 folds": 2,
+      "repeated uInt32 holds": 3,
+      "optional uInt32 holdslen": 4
+    },
+    "repeated seat seats": 7,
+    "required sInt32 lcSeatIndex": 8,
+    "repeated uInt32 endusers": 9
+  },
+  "chatInGame": {
+    "required uInt32 scene": 1,
+    "required uInt32 type": 2,
+    "optional uInt32 sender": 3,
+    "optional string content": 4,
+    "optional uInt32 desIndex": 5,
+    "optional uInt32 vtime": 6,
+    "optional uInt32 time": 7,
+    "optional uInt32 receiver": 8,
+    "optional string roomId": 9,
+    "optional string clubId": 10
+  },
+  "onlineState": {
+    "required uInt32 userId": 1,
+    "required uInt32 online": 2,
+    "optional string clubId": 3,
+    "optional string roomId": 4,
+    "optional string hallGamehallId": 5
+  },
+  "clubDynamicNotify": {
+    "required string clubId": 1,
+    "required uInt32 userId": 2,
+    "required uInt32 state": 3,
+    "required string info": 4
+  },
+  "clubRequestNotify": {
+    "required string clubId": 1,
+    "required uInt32 userId": 2
+  },
+  "clubInfoNotify": {
+    "required string clubId": 1,
+    "optional uInt32 ownerId": 2,
+    "optional uInt32 type": 3,
+    "optional string name": 4,
+    "optional string introduce": 5,
+    "optional string notice": 6,
+    "optional string create_time": 7,
+    "optional string open_time": 8,
+    "optional string close_time": 9,
+    "optional uInt32 opening": 10,
+    "repeated uInt32 members": 11,
+    "message table": {
+      "required string roomid": 1,
+      "required uInt32 type": 2,
+      "optional string conf": 3
+    },
+    "repeated table tables": 12,
+    "optional uInt32 request_open": 13
+  },
+  "clubInfoModifyNotify": {
+    "required uInt32 type": 1,
+    "required string clubId": 2,
+    "optional string name": 3,
+    "optional string introduce": 4,
+    "optional string notice": 5,
+    "optional string open_time": 6,
+    "optional string close_time": 7,
+    "optional uInt32 opening": 8,
+    "optional uInt32 ownerId": 9,
+    "optional uInt32 clubtype": 10,
+    "optional uInt32 request_open": 11
+  },
+  "inviteUserNotify": {
+    "required string clubId": 1,
+    "optional uInt32 ownerId": 2
+  },
+  "kickClubNotify": {
+    "required string clubId": 1,
+    "optional uInt32 ownerId": 2
+  },
+  "tableClubNotify": {
+    "required string clubId": 1,
+    "required string roomId": 2,
+    "required uInt32 type": 3,
+    "optional string conf": 4
+  },
+  "tableEnterClubNotify": {
+    "required string clubId": 1,
+    "required string roomId": 2,
+    "message seat": {
+      "required uInt32 userId": 1,
+      "required string name": 2,
+      "required string headimg": 3,
+      "required uInt32 sex": 4,
+      "required sInt32 score": 5,
+      "required uInt32 ready": 6,
+      "required uInt32 seatIndex": 7,
+      "required uInt32 online": 8,
+      "required string address": 9,
+      "required string ip": 10
+    },
+    "required seat seat": 3
+  },
+  "tableExitClubNotify": {
+    "required string clubId": 1,
+    "required string roomId": 2,
+    "required uInt32 userId": 3
+  },
+  "tableDissolveClubNotify": {
+    "required string clubId": 1,
+    "required string roomId": 2
+  },
+  "tableStateClubNotify": {
+    "required string clubId": 1,
+    "optional uInt32 opening": 2
+  },
+  "kickRoom": {
+    "required uInt32 userId": 1,
+    "required string roomId": 2
+  },
+  "tableHallGameHallNotify": {
+    "required string hallGamehallId": 1,
+    "required string roomId": 2,
+    "required uInt32 type": 3,
+    "optional string conf": 4
+  },
+  "tableEnterHallGameHallNotify": {
+    "required string hallGamehallId": 1,
+    "required string roomId": 2,
+    "message seat": {
+      "required uInt32 userId": 1,
+      "required string name": 2,
+      "required string headimg": 3,
+      "required uInt32 sex": 4,
+      "required sInt32 score": 5,
+      "required uInt32 ready": 6,
+      "required uInt32 seatIndex": 7,
+      "required uInt32 online": 8,
+      "required string address": 9,
+      "required string ip": 10,
+      "required uInt32 gems": 11
+    },
+    "required seat seat": 3
+  },
+  "tableExitHallGameHallNotify": {
+    "required string hallGamehallId": 1,
+    "required string roomId": 2,
+    "required uInt32 userId": 3
+  },
+  "tableDissolveHallGameHallNotify": {
+    "required string hallGamehallId": 1,
+    "required string roomId": 2
+  },
+  "tableInfoHallGameHallNotify": {
+    "required string hallGamehallId": 1,
+    "required string roomId": 2,
+    "optional uInt32 numOfGames": 3,
+    "message seat": {
+      "required uInt32 userId": 1,
+      "optional uInt32 gems": 2,
+      "optional uInt32 seatIndex": 3
+    },
+    "repeated seat seat": 4
+  },
+  "robotState": {
+    "optional string hallGamehallId": 1,
+    "optional string roomId": 2,
+    "required uInt32 userId": 3,
+    "required uInt32 isRobotTime": 4,
+    "optional uInt32 countdown": 5
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "development": {
+    "url": "mongodb://localhost:27017/mj_hz"
+  },
+
+  "test": {
+    "url": "mongodb://localhost:27017/mj_hz"
+  },
+
+  "production": {
+    "url": ""
+  }
+}

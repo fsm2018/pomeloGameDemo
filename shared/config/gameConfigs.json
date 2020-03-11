@@ -1,0 +1,35 @@
+{
+  "development": {
+    "3": {
+      "eachcost": 1
+    },
+    "2": {
+      "eachcost": 1
+    },
+    "4": {
+      "eachcost": 1
+    }
+  },
+  "test": {
+    "3": {
+      "eachcost": 1
+    },
+    "2": {
+      "eachcost": 1
+    },
+    "4": {
+      "eachcost": 1
+    }
+  },
+  "production": {
+    "3": {
+      "eachcost": 1
+    },
+    "2": {
+      "eachcost": 0
+    },
+    "4": {
+      "eachcost": 0
+    }
+  }
+}
