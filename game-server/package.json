@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "private": false,
     "dependencies": {
-        "pomelo": "2.2.5",
+        "pomelo": "2.2.7",
         "pomelo-globalchannel-plugin": "^0.0.7",
         "pomelo-status-plugin": "^0.0.6",
         "pomelo-logger": "^0.1.7",
