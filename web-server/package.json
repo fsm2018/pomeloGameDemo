@@ -4,7 +4,7 @@
   "private": false,
   "dependencies": {
     "redis": "^2.8.0",
-    "mongoose": "^5.5.12",
+    "mongoose": "^5.7.5",
     "koa": "^2.7.0",
     "koa-onerror": "^4.1.0",
     "koa-router": "^7.4.0",
